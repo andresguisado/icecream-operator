@@ -1,4 +1,7 @@
 # Icecream Operator
+An Icecream operator which deploys 3 deployments with one Chocalate Icecream Pod.
+
+##Instructions
 
 1. Create skeleton of the icecream custom resource definition(crd) with `icecream.example.com/v1alpha1` APIversion and `Icecreamm` Kind:
 
@@ -10,6 +13,23 @@
 
 ```
 $GOPATH/src/github.com/example-inc/icecream-operator/pkg/apis/icecream/v1alpha1/icecream_types.go
+```
+```
+// IcecreamSpec defines the desired state of Icecream
+type IcecreamSpec struct {
+	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
+	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
+	Size    int32  `json:"size"`
+	Flavour string `json:"flavour"`
+}
+
+// IcecreamStatus defines the observed state of Icecream
+type IcecreamStatus struct {
+	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
+	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
+	Nodes []string `json:"nodes"`
+	Count int32    `json:"count"`
+}
 ```
 
 3. Update code after modify the specs and status of the `Icecream` custom resource definition:
