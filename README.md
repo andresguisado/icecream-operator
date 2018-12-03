@@ -54,7 +54,7 @@ type IcecreamStatus struct {
 6. Deploy `Icecream` custom resource definition(crd):
 
 ```
-./deploy_crd.sh
+./deploy_icecream_crd.sh
 ```
 
 7. Deploy the `Icecream` controller:
