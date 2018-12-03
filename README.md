@@ -44,25 +44,32 @@ type IcecreamStatus struct {
 ./create_icecream_controller.sh
 ```
 
-5. Deploy `Icecream` custom resource definition(crd):
+
+5. Copy our `Icecream` controller:
+
+```
+./copy_icecream_controller.sh
+```
+
+6. Deploy `Icecream` custom resource definition(crd):
 
 ```
 ./deploy_crd.sh
 ```
 
-6. Deploy the `Icecream` controller:
+7. Deploy the `Icecream` controller:
 
 ```
 ./deploy_icecream_controller
 ```
 
-7. Deploy the `Chocolate Icecream` custom resource :
+8. Deploy the `Chocolate Icecream` custom resource :
 
 ```
 ./deploy_chocolate_icecream.sh
 ```
 
-8. Clean up everything:
+9. Clean up everything:
 
 ```
 ./cleanup.sh
